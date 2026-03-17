@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Entrada de Equipos | Taller</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Recepción de Equipo</h2>
+        
+        <form action="guardar_taller.php" method="POST">
+            
+            <div class="row">
+                <label>Nombre del Cliente:</label>
+                <input type="text" name="cliente" class="form-control" required>
+            </div>
+
+            <div class="row">
+                <label>Tipo de Máquina:</label>
+                <select name="tipo_equipo" class="form-control" required>
+                    <option value="">-- Seleccione --</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Escritorio">PC de Escritorio</option>
+                    <option value="Consola">Consola de Videojuegos</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label>Marca y Modelo:</label>
+                <input type="text" name="marca" class="form-control" placeholder="Ej: HP Pavilion">
+            </div>
+
+            <div class="row">
+                <label>Número de Serie:</label>
+                <input type="text" name="serie" class="form-control">
+            </div>
+
+            <div class="row">
+                <label>Descripción de la Falla:</label>
+                <textarea name="falla" class="form-control" rows="3" placeholder="¿Qué le sucede al equipo?"></textarea>
+            </div>
+
+            <input type="submit" value="Registrar en Taller" class="btn">
+            
+        </form>
+    </div>
+
+</body>
+</html>
